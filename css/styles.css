@@ -1,0 +1,72 @@
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --container-bg: white;
+  --heading-color: #2c3e50;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --container-bg: #2d2d2d;
+    --heading-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--container-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
+
+h1 {
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
