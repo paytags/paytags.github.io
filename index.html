@@ -5,13 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>paytags.org - Coming Soon!</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Dark theme favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-dark-180x180.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-dark-192x192.png" media="(prefers-color-scheme: dark)">
+
+  <!-- Light theme favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-light-16x16.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-light-32x32.png" media="(prefers-color-scheme: light)">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-light-180x180.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-light-192x192.png" media="(prefers-color-scheme: light)">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #333;
+      --container-bg: white;
+      --heading-color: #2c3e50;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --container-bg: #2d2d2d;
+        --heading-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
     body {
       font-family: 'IBM Plex Mono', monospace;
-      background-color: #f0f0f0;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
       margin: 0;
       padding: 0;
@@ -23,10 +51,10 @@
 
     .container {
       text-align: center;
-      background-color: white;
+      background-color: var(--container-bg);
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px var(--shadow-color);
     }
 
     .logo {
@@ -35,8 +63,25 @@
       margin-bottom: 2rem;
     }
 
+    .logo-light {
+      display: block;
+    }
+
+    .logo-dark {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .logo-light {
+        display: none;
+      }
+      .logo-dark {
+        display: block;
+      }
+    }
+
     h1 {
-      color: #2c3e50;
+      color: var(--heading-color);
       margin-bottom: 1rem;
       font-weight: 700;
     }
@@ -51,7 +96,8 @@
 <body>
   <div class="container">
     <h1>paytags.org</h1>
-    <img src="daps-icon.png" alt="DAPS Icon" class="logo">
+    <img src="images/paytags-light.png" alt="PayTags Logo" class="logo logo-light">
+    <img src="images/paytags-dark.png" alt="PayTags Logo" class="logo logo-dark">
     <p>Coming Soon!</p>
   </div>
 </body>
