@@ -3,6 +3,7 @@
   --text-color: #333;
   --container-bg: white;
   --paytag-color: #8B5CF6;
+  --at-color: #F7931A;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -12,6 +13,7 @@
     --text-color: #e0e0e0;
     --container-bg: #2d2d2d;
     --paytag-color: #8B5CF6;
+    --at-color: #F7931A;
     --shadow-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -32,15 +34,30 @@ body {
 .container {
   text-align: center;
   background-color: var(--container-bg);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px var(--shadow-color);
+  padding: 4rem;  /* Increased from 3rem */
+  border-radius: 12px;  /* Slightly increased for better proportion */
+  box-shadow: 0 0 15px var(--shadow-color);  /* Slightly larger shadow */
+}
+
+.coming-soon-badge {
+  position: fixed;
+  top: 30px;
+  right: -35px;
+  background: var(--at-color);
+  color: white;
+  padding: 8px 40px;
+  font-size: 0.9rem;
+  transform: rotate(45deg);
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
+  z-index: 1000;
 }
 
 .logo {
-  max-width: 320px;
+  max-width: 500px;  /* Increased from 400px */
   height: auto;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;  /* Increased from 2.5rem */
   display: block;
 }
 
@@ -63,8 +80,9 @@ body {
 
 h1 {
   color: var(--paytag-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;  /* Increased from 1rem */
   font-weight: 700;
+  font-size: 6.5rem;  /* Increased from 3rem */
 }
 
 p {
@@ -73,14 +91,20 @@ p {
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.6rem;  /* Increased from 1.4rem */
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--text-color);
   opacity: 0.9;
+  line-height: 1.4;
 }
 
 .paytag-highlight {
   color: var(--paytag-color);
+  font-weight: 700;
+}
+
+.at-symbol {
+  color: var(--at-color);
   font-weight: 700;
 }
