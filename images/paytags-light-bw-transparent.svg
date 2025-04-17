@@ -3,7 +3,7 @@
      width="1024" height="1024" viewBox="0 0 1024 1024"
      preserveAspectRatio="xMidYMid meet">
 
-  <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#000000">
+  <g transform="translate(512,512) scale(0.15,-0.15) translate(-5120,-5120)" fill="#000000">
 
     <!-- Inner tag background in white -->
     <path fill="#FFFFFF" d="M7755 7807 c51 -23 81 -52 108 -102 l22 -40 0 -1190 0 -1190 -24

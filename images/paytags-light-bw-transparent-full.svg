@@ -3,7 +3,7 @@
      width="1024" height="1024" viewBox="0 0 1024 1024"
      preserveAspectRatio="xMidYMid meet">
 
-  <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#000000">
+  <g transform="translate(512,512) scale(0.15,-0.15) translate(-5120,-5120)" fill="#000000">
 
     <!-- Main tag shape and outer ring -->
     <path d="M5280 8145 c-95 -20 -176 -50 -255 -96 -60 -36 -271 -242 -1492
