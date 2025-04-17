@@ -2,7 +2,7 @@
   --bg-color: #f0f0f0;
   --text-color: #333;
   --container-bg: white;
-  --heading-color: #2c3e50;
+  --heading-color: #8B5CF6;  /* Changed to purple */
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -11,7 +11,7 @@
     --bg-color: #1a1a1a;
     --text-color: #e0e0e0;
     --container-bg: #2d2d2d;
-    --heading-color: #ffffff;
+    --heading-color: #8B5CF6;  /* Same purple in dark mode */
     --shadow-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 320px;
   height: auto;
   margin-bottom: 2rem;
 }
