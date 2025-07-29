@@ -1,0 +1,162 @@
+/* Base styles */
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --container-bg: white;
+  --paytag-color: #8B5CF6;
+  --at-color: #F7931A;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --container-bg: #2d2d2d;
+    --paytag-color: #8B5CF6;
+    --at-color: #F7931A;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Core styles */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--container-bg);
+  padding: 4rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px var(--shadow-color);
+  width: 800px;
+  max-width: 90%;
+  box-sizing: border-box;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coming-soon-badge {
+  position: fixed;
+  top: 30px;
+  right: -35px;
+  background: var(--at-color);
+  color: white;
+  padding: 8px 40px;
+  font-size: 0.9rem;
+  transform: rotate(45deg);
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
+  z-index: 1000;
+}
+
+.logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 3rem;
+  display: block;
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+h1 {
+  color: var(--paytag-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: min(6.5rem, 14vw);  /* Increased from 12vw */
+  line-height: 1.1;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.tagline {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.paytag-highlight {
+  color: var(--paytag-color);
+  font-weight: 700;
+}
+
+.at-symbol {
+  color: var(--at-color);
+  font-weight: 700;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;  /* Reduced from 2rem */
+    margin: 1rem;
+    min-height: 600px;
+  }
+
+  .tagline {
+    font-size: 1.6rem;
+  }
+
+  .coming-soon-badge {
+    font-size: 0.8rem;
+    padding: 6px 30px;
+    right: -40px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1rem;  /* Reduced from 1.5rem */
+    min-height: 500px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .coming-soon-badge {
+    font-size: 0.7rem;
+    padding: 5px 25px;
+    top: 20px;
+    right: -45px;
+  }
+}
